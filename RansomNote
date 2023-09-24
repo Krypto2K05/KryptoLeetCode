@@ -1,0 +1,11 @@
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        """
+        :type ransomNote: str
+        :type magazine: str
+        :rtype: bool
+        """
+        ransomcount, magazinecount = Counter(ransomNote), Counter(magazine)
+        if ransomcount == magazinecount & ransomcount:
+            return True
+        return False
